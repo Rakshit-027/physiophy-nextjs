@@ -7,9 +7,6 @@ import ProFileCard from "@/app/components/ProFileCard/ProFileCard";
 import ScrollReveal from "@/app/components/ScrollReveal/ScrollReveal";
 import HomeCard from "@/app/components/HomeCard/HomeCard";
 
-// Image imports with next/image
-
-
 // Interface for photos array
 interface Photo {
   id: number;
@@ -25,10 +22,11 @@ const photos: Photo[] = [
 ];
 
 const Founder = () => {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  // Update the ref to specify HTMLElement instead of HTMLDivElement
+  const scrollContainerRef = useRef<HTMLElement>(null);
 
   return (
-    <div className="founder-container" ref={scrollContainerRef}>
+    <div className="founder-container" ref={scrollContainerRef as React.RefObject<HTMLDivElement>}>
       <div className="content-wrapper">
         <div className="story-section">
           <h2 className="story-title">The Story Of Founder From Passion To Practice</h2>
