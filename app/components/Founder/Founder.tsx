@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react"; 
 import "./Founder.css";
 import ProFileCard from "@/app/components/ProFileCard/ProFileCard";
 
@@ -25,40 +25,46 @@ const photos: Photo[] = [
 ];
 
 const Founder = () => {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
   return (
-    <div className="founder-container">
+    <div className="founder-container" ref={scrollContainerRef}>
       <div className="content-wrapper">
         <div className="story-section">
           <h2 className="story-title">The Story Of Founder From Passion To Practice</h2>
 
           <div className="story-content">
             <div className="text-section">
-              <div className="story-paragraph"><ScrollReveal >
-                Physiophy is not just a rehabilitation center—it is a space of
-                transformation, resilience, and hope. Founded by Dr. Tanvi
-                Katariya, a renowned physiotherapist with over five years of
-                hands-on experience, Physiophy was built on the belief that
-                healing goes beyond recovery.
-              </ScrollReveal>
-            </div>
-            <div className="story-paragraph"><ScrollReveal >
-                As a celebrity physiotherapist, Dr. Katariya has treated
-                esteemed personalities, yet her true passion lies in making world-class
-                physiotherapy accessible to all. With a deep commitment to
-                patient-centric care, she has redefined physiotherapy as
-                more than just treatment—it is a movement toward
-                strength, innovation, and excellence.
-              </ScrollReveal></div>
+              <div className="story-paragraph">
+                <ScrollReveal scrollContainerRef={scrollContainerRef}>
+                  Physiophy is not just a rehabilitation center—it is a space of
+                  transformation, resilience, and hope. Founded by Dr. Tanvi
+                  Katariya, a renowned physiotherapist with over five years of
+                  hands-on experience, Physiophy was built on the belief that
+                  healing goes beyond recovery.
+                </ScrollReveal>
+              </div>
+              <div className="story-paragraph">
+                <ScrollReveal scrollContainerRef={scrollContainerRef}>
+                  As a celebrity physiotherapist, Dr. Katariya has treated
+                  esteemed personalities, yet her true passion lies in making world-class
+                  physiotherapy accessible to all. With a deep commitment to
+                  patient-centric care, she has redefined physiotherapy as
+                  more than just treatment—it is a movement toward
+                  strength, innovation, and excellence.
+                </ScrollReveal>
+              </div>
               
-              <div className="story-paragraph"><ScrollReveal >
-                "Every patient is not just a case but a story, and at Physiophy,
-                every story is given the attention, expertise, and dedication
-                it deserves. This is a place where science meets compassion,
-                where barriers are broken, and where every step forward is a
-                victory."
-              </ScrollReveal></div>
+              <div className="story-paragraph">
+                <ScrollReveal scrollContainerRef={scrollContainerRef}>
+                  "Every patient is not just a case but a story, and at Physiophy,
+                  every story is given the attention, expertise, and dedication
+                  it deserves. This is a place where science meets compassion,
+                  where barriers are broken, and where every step forward is a
+                  victory."
+                </ScrollReveal>
+              </div>
 
-              
               <p className="quote-text">
                 -At Physiophy, we don't just heal we transform lives
               </p>
@@ -70,19 +76,6 @@ const Founder = () => {
           </div>
         </div>
         <HomeCard />
-        {/* Uncomment this section if needed, syntax is corrected */}
-        {/* <div className="celeb">
-          {photos.map((photo) => (
-            <div key={photo.id} className="photo-container">
-              <Image
-                src={photo.src}
-                alt={photo.alt}
-                width={300}
-                height={300}
-              />
-            </div>
-          ))}
-        </div> */}
       </div>
     </div>
   );
