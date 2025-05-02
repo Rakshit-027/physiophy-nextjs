@@ -1,8 +1,11 @@
+"use client";
+
 import React, { useEffect, useRef } from 'react';
 import './ServicesInfo.css';
 
 const ServicesInfo = () => {
-  const sectionRefs = useRef([]);
+  // Type sectionRefs as an array of HTMLElement or null
+  const sectionRefs = useRef<(HTMLElement | null)[]>([]);
 
   useEffect(() => {
     const observerOptions = {
@@ -10,7 +13,7 @@ const ServicesInfo = () => {
       rootMargin: '0px',
       threshold: 0.2,
     };
-  
+
     const handleIntersect = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -18,13 +21,13 @@ const ServicesInfo = () => {
         }
       });
     };
-  
+
     const observer = new IntersectionObserver(handleIntersect, observerOptions);
-  
+
     sectionRefs.current.forEach((section) => {
       if (section) observer.observe(section);
     });
-  
+
     return () => {
       sectionRefs.current.forEach((section) => {
         if (section) observer.unobserve(section);
@@ -88,7 +91,7 @@ const ServicesInfo = () => {
       { name: 'Hand & Fine Motor Rehab', desc: 'Therapy to restore hand strength, coordination, and dexterity.' },
     ],
   };
-  
+
   return (
     <div className="services-container">
       <h1 className="main-heading">Conditions Served In PhysioPhy</h1>
