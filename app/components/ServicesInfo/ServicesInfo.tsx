@@ -96,7 +96,12 @@ const ServicesInfo = () => {
     <div className="services-container">
       <h1 className="main-heading">Conditions Served In PhysioPhy</h1>
 
-      <section className="service-section" ref={(el) => (sectionRefs.current[0] = el)}>
+      <section
+        className="service-section"
+        ref={(el) => {
+          sectionRefs.current[0] = el;
+        }}
+      >
         <h2>Pediatric Rehabilitation</h2>
         <div className="services-grid">
           {servicesData.pediatric.map((service, index) => (
@@ -108,7 +113,12 @@ const ServicesInfo = () => {
         </div>
       </section>
 
-      <section className="service-section" ref={(el) => (sectionRefs.current[1] = el)}>
+      <section
+        className="service-section"
+        ref={(el) => {
+          sectionRefs.current[1] = el;
+        }}
+      >
         <h2>Adult [Neuro & Ortho] & Geriatric Care</h2>
         <div className="services-grid">
           {servicesData.adultGeriatric.map((service, index) => (
@@ -120,7 +130,12 @@ const ServicesInfo = () => {
         </div>
       </section>
 
-      <section className="service-section" ref={(el) => (sectionRefs.current[2] = el)}>
+      <section
+        className="service-section"
+        ref={(el) => {
+          sectionRefs.current[2] = el;
+        }}
+      >
         <h2>Women’s Health & Wellness</h2>
         <div className="services-grid">
           {servicesData.womensHealth.map((service, index) => (
@@ -132,7 +147,12 @@ const ServicesInfo = () => {
         </div>
       </section>
 
-      <section className="service-section" ref={(el) => (sectionRefs.current[3] = el)}>
+      <section
+        className="service-section"
+        ref={(el) => {
+          sectionRefs.current[3] = el;
+        }}
+      >
         <h2>Specialized Therapies</h2>
         <div className="services-grid">
           {servicesData.specializedTherapies.map((service, index) => (
