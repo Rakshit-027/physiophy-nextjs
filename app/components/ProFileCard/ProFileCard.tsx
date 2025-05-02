@@ -1,8 +1,20 @@
 import React from "react";
 import "./ProFileCard.css";
-// import FounderImage from './assets/components/Mini/7.jpg';
 import FounderImage from '../assets/7.jpg';
-const ProfileCard = ({ name, role, image, description, socialLinks }) => {
+
+// Define TypeScript interface for the component props
+interface ProfileCardProps {
+  name: string;
+  role: string;
+  image: string;
+  description?: string;
+  socialLinks?: Array<{
+    url: string;
+    icon: string;
+  }>;
+}
+
+const ProfileCard: React.FC<ProfileCardProps> = ({ name, role, image, description, socialLinks }) => {
   return (
     <figure className="snip1515">
       <div className="profile-image">
@@ -19,7 +31,7 @@ const ProfileCard = ({ name, role, image, description, socialLinks }) => {
         <h4>Internationally Certified Garbh Sanskar Coach</h4>
         {/* <p>{description}</p> */}
         {/* <div className="icons">
-          {socialLinks.map((link, index) => (
+          {socialLinks?.map((link, index) => (
             <a key={index} href={link.url} target="_blank" rel="noopener noreferrer">
               <i className={link.icon}></i>
             </a>
@@ -30,8 +42,20 @@ const ProfileCard = ({ name, role, image, description, socialLinks }) => {
   );
 };
 
-const ProfileList = () => {
-  const profiles = [
+// Define TypeScript interface for the profile data
+interface Profile {
+  name: string;
+  role: string;
+  image: string;
+  description: string;
+  socialLinks: Array<{
+    url: string;
+    icon: string;
+  }>;
+}
+
+const ProfileList: React.FC = () => {
+  const profiles: Profile[] = [
     {
       name: "Dr. Tanvi Katariya",
       role: "Founder",
