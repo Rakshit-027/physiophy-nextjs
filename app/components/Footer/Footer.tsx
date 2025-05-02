@@ -3,7 +3,6 @@ import Link from "next/link"; // Use Next.js Link for navigation
 import Image from "next/image"; // Use next/image for optimized images
 import {
   Facebook,
-  Twitter,
   Instagram,
   Linkedin,
   Youtube,
