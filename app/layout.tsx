@@ -56,9 +56,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-snippet': -1, // Fixed: Changed maxSnippet to max-snippet
-      maxImagePreview: "large",
-      maxVideoPreview: -1,
+      'max-snippet': -1,
+      'max-image-preview': 'large', // Fixed: Changed maxImagePreview to max-image-preview
+      'max-video-preview': -1, // Fixed: Changed maxVideoPreview to max-video-preview
     },
   },
 };
