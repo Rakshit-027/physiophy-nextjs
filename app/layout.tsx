@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "Dr. Tanvi Physiophy",
     "Wellness Therapy",
     "Best Physio in Nagpur",
-    "Physical Therapy Clinic"
+    "Physical Therapy Clinic",
   ],
   authors: [{ name: "Physiophy Physiotherapy Clinic" }],
   creator: "Physiophy",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      maxSnippet: -1,
+      'max-snippet': -1, // Fixed: Changed maxSnippet to max-snippet
       maxImagePreview: "large",
       maxVideoPreview: -1,
     },
