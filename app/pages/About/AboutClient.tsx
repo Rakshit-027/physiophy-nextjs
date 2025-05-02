@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Award, Heart, Users } from "lucide-react";
-import { createClient } from "@/app/components/SupabaseClient/SupabaseClient";; // Adjust path based on your project structure
+import { supabase } from "@/app/components/SupabaseClient/SupabaseClient"; // Corrected import
 import "./About.css";
 
 // Define interface for team member data
@@ -29,8 +29,13 @@ const AboutClient = () => {
         const { data, error } = await supabase.from("doctors").select("*");
         if (error) throw error;
         setTeamMembers(data as TeamMember[]);
-      } catch (error) {
-        console.error("Error fetching team members:", error);
+      } catch (error: unknown) { // Use unknown for catch clause
+        // Safely handle the error
+        if (error instanceof Error) {
+          console.error("Error fetching team members:", error.message);
+        } else {
+          console.error("Unexpected error fetching team members:", error);
+        }
       } finally {
         setIsLoading(false);
       }
