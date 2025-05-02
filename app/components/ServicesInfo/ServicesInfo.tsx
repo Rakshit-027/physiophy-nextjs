@@ -10,21 +10,21 @@ const ServicesInfo = () => {
       rootMargin: '0px',
       threshold: 0.2,
     };
-
-    const handleIntersect = (entries) => {
+  
+    const handleIntersect = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
         }
       });
     };
-
+  
     const observer = new IntersectionObserver(handleIntersect, observerOptions);
-
+  
     sectionRefs.current.forEach((section) => {
       if (section) observer.observe(section);
     });
-
+  
     return () => {
       sectionRefs.current.forEach((section) => {
         if (section) observer.unobserve(section);
