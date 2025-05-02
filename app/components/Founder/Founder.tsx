@@ -1,19 +1,14 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import "./Founder.css";
 import ProFileCard from "@/app/components/ProFileCard/ProFileCard";
-import ShinyText from "@/app/components/Mini/ShinyText/ShinyText";
+
 import ScrollReveal from "@/app/components/ScrollReveal/ScrollReveal";
 import HomeCard from "@/app/components/HomeCard/HomeCard";
 
 // Image imports with next/image
-import FounderImage from "@/app/assets/7.jpg";
-import pareshalImg from "@/app/assets/Celeb/With Paresh Rawal (1).jpg";
-import aliirani from "@/app/assets/Celeb/With Dr. Ali Irani (1).jpg";
-import TanuJain from "@/app/assets/Celeb/Dr. Tanu Jain (1).jpg";
-import Velu from "@/app/assets/Celeb/With Dr. Velumani sir (1).jpg";
+
 
 // Interface for photos array
 interface Photo {
@@ -38,30 +33,32 @@ const Founder = () => {
 
           <div className="story-content">
             <div className="text-section">
-              <ScrollReveal className="story-paragraph">
+              <div className="story-paragraph"><ScrollReveal >
                 Physiophy is not just a rehabilitation center—it is a space of
                 transformation, resilience, and hope. Founded by Dr. Tanvi
                 Katariya, a renowned physiotherapist with over five years of
                 hands-on experience, Physiophy was built on the belief that
                 healing goes beyond recovery.
               </ScrollReveal>
-
-              <ScrollReveal className="story-paragraph">
+            </div>
+            <div className="story-paragraph"><ScrollReveal >
                 As a celebrity physiotherapist, Dr. Katariya has treated
                 esteemed personalities, yet her true passion lies in making world-class
                 physiotherapy accessible to all. With a deep commitment to
                 patient-centric care, she has redefined physiotherapy as
                 more than just treatment—it is a movement toward
                 strength, innovation, and excellence.
-              </ScrollReveal>
-
-              <ScrollReveal className="story-paragraph">
+              </ScrollReveal></div>
+              
+              <div className="story-paragraph"><ScrollReveal >
                 "Every patient is not just a case but a story, and at Physiophy,
                 every story is given the attention, expertise, and dedication
                 it deserves. This is a place where science meets compassion,
                 where barriers are broken, and where every step forward is a
                 victory."
-              </ScrollReveal>
+              </ScrollReveal></div>
+
+              
               <p className="quote-text">
                 -At Physiophy, we don't just heal we transform lives
               </p>
