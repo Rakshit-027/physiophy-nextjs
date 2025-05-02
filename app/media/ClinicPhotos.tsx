@@ -1,10 +1,9 @@
-// app/media/page.tsx
 "use client";
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Camera } from "lucide-react";
-import { supabase } from "@/app/components/SupabaseClient/SupabaseClient"; // Updated import
+import { supabase } from "@/app/components/SupabaseClient/SupabaseClient";
 import "./ClinicPhotos.css";
 import Navbar from "../components/Navbar/page";
 
@@ -25,15 +24,20 @@ const ClinicPhotos = () => {
     const fetchImages = async () => {
       try {
         const { data, error } = await supabase
-          .from("uploads") // Replace with correct table name if different
+          .from("uploads")
           .select("*")
           .not("photo_url", "is", null)
           .order("created_at", { ascending: false });
 
         if (error) throw error;
         setPhotos(data || []);
-      } catch (err: Error) {
-        setError(err.message);
+      } catch (err: unknown) { // Changed from Error to unknown
+        // Safely handle the error
+        if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError("An unexpected error occurred");
+        }
       } finally {
         setLoading(false);
       }
@@ -61,7 +65,7 @@ const ClinicPhotos = () => {
 
   return (
     <div className="clinic-photos">
-      <Navbar/>
+      <Navbar />
       <header className="gallery-header">
         {/* <Camera size={32} /> */}
         <h1>Our Clinic Gallery</h1>
