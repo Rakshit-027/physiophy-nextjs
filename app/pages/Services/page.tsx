@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Link from "next/link"; // Use Next.js Link for navigation
+import Link from "next/link";
 import {
   Stethoscope,
   Brain,
@@ -16,7 +16,7 @@ import "./Services.css";
 
 // Define interface for service data
 interface Service {
-  icon: JSX.Element;
+  icon: React.ReactNode; // Changed from JSX.Element to React.ReactNode
   title: string;
   description: string;
   category: string;
@@ -63,7 +63,7 @@ const services: Service[] = [
 
 // Define props for ServiceCard component
 interface ServiceCardProps {
-  icon: JSX.Element;
+  icon: React.ReactNode; // Changed from JSX.Element to React.ReactNode
   title: string;
   description: string;
   category: string;
@@ -134,8 +134,6 @@ const Services = () => {
             <ServiceCard key={index} {...service} />
           ))}
         </div>
-
-        
       </div>
 
       {showPopup && (
