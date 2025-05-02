@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Play, Pause, Volume2, VolumeX } from "lucide-react";
 import "./PatientVideos.css";
 
+// Define interfaces
 interface VideoItem {
   id: number;
   src: string;
@@ -17,40 +18,21 @@ const VideoPlayer = ({ src, poster }: VideoItem) => {
   const [isMuted, setIsMuted] = useState(true);
   const [progress, setProgress] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isIntersecting, setIsIntersecting] = useState(false);
+  const [showPoster, setShowPoster] = useState(true);
 
-  // Intersection Observer for lazy loading
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsIntersecting(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (videoRef.current) {
-      observer.observe(videoRef.current);
-    }
-
-    return () => {
-      if (videoRef.current) {
-        observer.unobserve(videoRef.current);
-      }
-    };
-  }, []);
-
+  // Toggle play/pause
   const togglePlay = () => {
     if (videoRef.current?.paused) {
-      videoRef.current.play().then(() => setIsPlaying(true));
+      videoRef.current.play();
+      setIsPlaying(true);
+      setShowPoster(false);
     } else {
       videoRef.current?.pause();
       setIsPlaying(false);
     }
   };
 
+  // Toggle mute/unmute
   const toggleMute = () => {
     if (videoRef.current) {
       videoRef.current.muted = !videoRef.current.muted;
@@ -58,6 +40,12 @@ const VideoPlayer = ({ src, poster }: VideoItem) => {
     }
   };
 
+  // Handle video loaded
+  const handleVideoLoaded = () => {
+    setIsLoaded(true);
+  };
+
+  // Update progress bar
   useEffect(() => {
     const video = videoRef.current;
     const updateProgress = () => {
@@ -68,17 +56,13 @@ const VideoPlayer = ({ src, poster }: VideoItem) => {
     };
 
     video?.addEventListener("timeupdate", updateProgress);
-    video?.addEventListener("loadeddata", () => setIsLoaded(true));
-
-    return () => {
-      video?.removeEventListener("timeupdate", updateProgress);
-      video?.removeEventListener("loadeddata", () => setIsLoaded(true));
-    };
+    return () => video?.removeEventListener("timeupdate", updateProgress);
   }, []);
 
+  // Seek video when clicking progress bar
   const handleProgressClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (videoRef.current) {
-      const rect = e.currentTarget.getBoundingClientRect();
+      const rect = (e.target as HTMLElement).getBoundingClientRect();
       const clickPosition = (e.clientX - rect.left) / rect.width;
       const newTime = clickPosition * videoRef.current.duration;
       videoRef.current.currentTime = newTime;
@@ -87,29 +71,34 @@ const VideoPlayer = ({ src, poster }: VideoItem) => {
 
   return (
     <div className="video-container">
-      {!isLoaded && (
-        <div className="video-poster">
-          <Image
-            src={poster}
-            alt="Video poster"
-            fill
-            style={{ objectFit: "cover" }}
-            priority={false}
-          />
+      {showPoster && (
+        <div className="poster-container" onClick={togglePlay}>
+          <div className="poster-wrapper">
+            <Image 
+              src={poster} 
+              alt="Video thumbnail" 
+              layout="fill"
+              objectFit="cover"
+              priority
+            />
+            <div className="play-overlay">
+              <Play size={50} />
+            </div>
+          </div>
         </div>
       )}
       <video
         ref={videoRef}
-        src={isIntersecting ? src : ""}
+        src={src}
         poster={poster}
         loop
         playsInline
         onClick={togglePlay}
         preload="none"
-        loading="lazy"
-        className={isLoaded ? "video-loaded" : "video-loading"}
+        onLoadedData={handleVideoLoaded}
+        className={`${isLoaded ? "video-loaded" : "video-loading"} ${showPoster ? "hidden" : ""}`}
       />
-      <div className="video-controls">
+      <div className={`video-controls ${showPoster ? "hidden" : ""}`}>
         <div className="controls-wrapper">
           <button onClick={togglePlay} className="control-btn">
             {isPlaying ? <Pause size={22} /> : <Play size={22} />}
@@ -122,7 +111,7 @@ const VideoPlayer = ({ src, poster }: VideoItem) => {
           <div className="progress-bar" style={{ width: `${progress}%` }} />
         </div>
       </div>
-      {!isPlaying && (
+      {!isPlaying && !showPoster && (
         <div className="play-overlay" onClick={togglePlay}>
           <Play size={50} />
         </div>
@@ -133,21 +122,15 @@ const VideoPlayer = ({ src, poster }: VideoItem) => {
 
 function PatientVideos() {
   const videos: VideoItem[] = [
-    { 
-      id: 1, 
-      src: "https://zlmsmdibvnnhxthvdhhf.supabase.co/storage/v1/object/public/media/reels/Patientsix.mp4", 
-      poster: "https://zlmsmdibvnnhxthvdhhf.supabase.co/storage/v1/object/public/ScrollSlider/thumb/Siddharth%20(Spinal%20Cord%20Injury).jpg" 
-    },
-    { 
-      id: 2, 
-      src: "https://zlmsmdibvnnhxthvdhhf.supabase.co/storage/v1/object/public/media/reels/VID-20250207-WA0001.mp4", 
-      poster: "https://zlmsmdibvnnhxthvdhhf.supabase.co/storage/v1/object/public/ScrollSlider/thumb/Rakshit%20(GBS).jpg" 
-    },
-    { 
-      id: 3, 
-      src: "https://zlmsmdibvnnhxthvdhhf.supabase.co/storage/v1/object/public/media/reels/Patientseven.mp4", 
-      poster: "https://zlmsmdibvnnhxthvdhhf.supabase.co/storage/v1/object/public/ScrollSlider/thumb/Bhavika%20(Developmental%20Delay).jpg" 
-    },
+    { id: 1, src: "https://zlmsmdibvnnhxthvdhhf.supabase.co/storage/v1/object/public/media/reels/Patientsix.mp4", poster: "https://zlmsmdibvnnhxthvdhhf.supabase.co/storage/v1/object/public/ScrollSlider/thumb/Siddharth%20(Spinal%20Cord%20Injury).jpg" },
+    { id: 2, src: "https://zlmsmdibvnnhxthvdhhf.supabase.co/storage/v1/object/public/media/reels/VID-20250207-WA0001.mp4", poster: "https://zlmsmdibvnnhxthvdhhf.supabase.co/storage/v1/object/public/ScrollSlider/thumb/Rakshit%20(GBS).jpg" },
+    { id: 3, src: "https://zlmsmdibvnnhxthvdhhf.supabase.co/storage/v1/object/public/media/reels/Patientseven.mp4", poster: "https://zlmsmdibvnnhxthvdhhf.supabase.co/storage/v1/object/public/ScrollSlider/thumb/Bhavika%20(Developmental%20Delay).jpg" },
+  ];
+
+  const reels: VideoItem[] = [
+    { id: 1, src: "/assets/Ad reel FINAL.mov", poster: "/assets/inform0.jpg" },
+    { id: 2, src: "/assets/VID-20250207-WA0001.mp4", poster: "/assets/inform.jpg" },
+    { id: 3, src: "/assets/c1.mp4", poster: "/assets/inform2.jpg" },
   ];
 
   return (
@@ -157,11 +140,24 @@ function PatientVideos() {
         {videos.map((video) => (
           <VideoPlayer
             key={video.id}
+            id={video.id}
             src={video.src}
             poster={video.poster}
           />
         ))}
       </div>
+
+      {/* <h1 className="title reels-title">Informative Videos</h1>
+      <div className="videos-container">
+        {reels.map((video) => (
+          <VideoPlayer
+            key={video.id}
+            id={video.id}
+            src={video.src}
+            poster={video.poster}
+          />
+        ))}
+      </div> */}
     </div>
   );
 }
