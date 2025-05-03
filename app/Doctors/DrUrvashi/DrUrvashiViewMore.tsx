@@ -58,7 +58,7 @@ const DrUrvashiViewMore = () => {
           </div>
 
           <div className="tanvi-profile-intro">
-            <h1 className="tanvi-profile-name">Dr. Urvashi</h1>
+            <h1 className="tanvi-profile-name">Dr. Urvashi Gahukar</h1>
             <p className="tanvi-profile-title">
               BPTH | Consultant Orthopedic Physiotherapist, Shri Krishnanagar Branch
             </p>

@@ -125,10 +125,29 @@
 
 .docinfo-doctor-role {
     color: #64748b;
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 16px;
-    min-height: 40px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: -1.9;
+    margin-bottom: -16px;
+    /* min-height: 40px; */
+}
+.docinfo-doctor-role-1 {
+    color: #64748b bold;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: -1.9;
+    /* margin-bottom: -16px; */
+    margin-bottom: 5px;
+    /* min-height: 40px; */
+}
+.docinfo-doctor-role-2 {
+    color: #64748b ;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: -1.9;
+    /* margin-bottom: -16px; */
+    margin-bottom: 5px;
+    /* min-height: 40px; */
 }
 
 .docinfo-specialties {

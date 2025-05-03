@@ -8,7 +8,9 @@ import "./Docinfo.css";
 interface Doctor {
   id: number;
   name: string;
-  role: string;
+  roleone: string;
+  roletwo: string;
+  rolethree: string;
   image: string;
   specialties: string[];
   slug: string;
@@ -19,7 +21,9 @@ const Docinfo = () => {
     {
       id: 1,
       name: "DR. VAGISH KATARIYA",
-      role: "CONSULTANT PEDIATRIAN AND DIRECTOR,PHYSIOPHY",
+      roleone: "DIRECTOR",
+      roletwo: "CONSULTANT PEDIATRIAN",
+      rolethree: "PHYSIOPHY",
       image: "https://zlmsmdibvnnhxthvdhhf.supabase.co/storage/v1/object/public/ScrollSlider/docs/cropped_image%20(4).png",
       specialties: ["Dermatology", "Cosmetic Surgery", "Skin Care"],
       slug: "DrVagesh",
@@ -27,7 +31,9 @@ const Docinfo = () => {
     {
       id: 2,
       name: "DR. GEET KATARIYA",
-      role: "CONSULTANT RADIOLOGIST,CHAIRMAN ,PHYSIOPHY",
+      roleone: "CHAIRMAN",
+      roletwo:"CONSULTANT RADIOLOGIST",
+      rolethree:"PHYSIOPHY",
       image: "https://zlmsmdibvnnhxthvdhhf.supabase.co/storage/v1/object/public/ScrollSlider/docs/cropped_image%20(3).png",
       specialties: ["Dermatology", "Hair Treatment", "Laser Therapy"],
       slug: "DrGeet",
@@ -35,7 +41,9 @@ const Docinfo = () => {
     {
       id: 3,
       name: "DR. TANVI KATARIYA",
-      role: "FOUNDER AND SENIOR NEURO CONSULTANT PHYSIOTHERAPIST ,PHYSIOPHY",
+      roleone: "FOUNDER",
+      roletwo:"SENIOR NEURO PHYSIOTHERAPIST",
+      rolethree:"PHYSIOPY",
       image: "https://zlmsmdibvnnhxthvdhhf.supabase.co/storage/v1/object/public/ScrollSlider/docs/cropped_image%20(1).png",
       specialties: ["Trichology", "Hair Transplant", "Dermatology"],
       slug: "DrTanvi",
@@ -43,7 +51,9 @@ const Docinfo = () => {
     {
       id: 4,
       name: "DR. URVASHI GAHUKAR",
-      role: "BRANCH INCHARGE AND ORTHO CONSULTANT PHYSIOTHERAPIST,PHYSIOPHY",
+      roleone: "BRANCH INCHARGE",
+      roletwo:"ORTHO CONSULTANT PHYSIOTHERAPIST",
+      rolethree:"PHYSIOPHY",
       image: "https://zlmsmdibvnnhxthvdhhf.supabase.co/storage/v1/object/public/ScrollSlider/docs/cropped_image%20(2).png",
       specialties: ["Trichology", "Hair Transplant", "Dermatology"],
       slug: "DrUrvashi",
@@ -51,7 +61,9 @@ const Docinfo = () => {
     {
       id: 5,
       name: "DR. MEGHA LANJEWAR",
-      role: "CONSULTANT NEUROPHYSIOTHERAPIST,PHYSIOPHY",
+      roleone: "CONSULTANT",
+      roletwo:"NEUROPHYSIOTHERAPIST",
+      rolethree:"PHYSIOPHY",
       image: "https://zlmsmdibvnnhxthvdhhf.supabase.co/storage/v1/object/public/ScrollSlider/docs/meghna-croped.png",
       specialties: [""],
       slug: "DrMegha",
@@ -59,7 +71,9 @@ const Docinfo = () => {
     {
       id: 6,
       name: "DR. SAGAR SAWLANI",
-      role: "CONSULTANT PHYSIOTHERAPIST,PHYSIOPHY",
+      roleone: "CONSULTANT",
+      roletwo:"PHYSIOTHERAPIST",
+      rolethree:"PHYSIOPHY",
       image: "https://zlmsmdibvnnhxthvdhhf.supabase.co/storage/v1/object/public/ScrollSlider/docs/sagar-crop.png",
       specialties: [""],
       slug: "DrSagar",
@@ -99,7 +113,9 @@ const Docinfo = () => {
                 </div>
                 <div className="docinfo-content">
                   <h4 className="docinfo-doctor-name">{doctor.name}</h4>
-                  <p className="docinfo-doctor-role">{doctor.role}</p>
+                  <p className="docinfo-doctor-role-1">{doctor.roleone}</p>
+                  <p className="docinfo-doctor-role-2">{doctor.roletwo}</p>
+                  <p className="docinfo-doctor-role">{doctor.rolethree}</p>
                   <Link href={`/Doctors/${doctor.slug}`} className="docinfo-view-more">
                     <span>VIEW MORE</span>
                     <svg className="docinfo-arrow" viewBox="0 0 24 24">
@@ -120,7 +136,7 @@ const StyledWrapper = styled.div`
   .card {
     position: relative;
     width: 358px;
-    height: 421px;
+    height: 457px;
     border-radius: 14px;
     z-index: 1111;
     overflow: hidden;
@@ -136,7 +152,7 @@ const StyledWrapper = styled.div`
     top: 5px;
     left: 5px;
     width: 350px;
-    height: 410px;
+    height: 448px;
     z-index: 2;
     background: #dddafe;
     backdrop-filter: blur(24px);
