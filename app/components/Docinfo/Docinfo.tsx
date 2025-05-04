@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link"; // Use Next.js Link for navigation
 import Image from "next/image"; // Use next/image for optimized images
-import styled from "styled-components";
 import "./Docinfo.css";
 
 // Define interface for doctor data
@@ -81,7 +80,8 @@ const Docinfo = () => {
   ];
 
   return (
-    <StyledWrapper>
+    // <StyledWrapper>
+    <>
       <div className="docinfo-container">
         <div className="docinfo-header">
           <span className="docinfo-subtitle-accent">Our Team</span>
@@ -128,113 +128,13 @@ const Docinfo = () => {
           ))}
         </div>
       </div>
-    </StyledWrapper>
+    {/* </StyledWrapper> */}
+    </>
   );
 };
 
 const StyledWrapper = styled.div`
-  .card {
-    position: relative;
-    width: 358px;
-    height: 457px;
-    border-radius: 14px;
-    z-index: 1111;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
-  }
-
-  .bg {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 350px;
-    height: 448px;
-    z-index: 2;
-    background: #dddafe;
-    backdrop-filter: blur(24px);
-    border-radius: 10px;
-    overflow: hidden;
-    outline: 2px solid white;
-  }
-
-  .blob {
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: 15px solid #39FF14;
-    background-color: rgba(255, 0, 0, 0.4);
-    filter: blur(16px);
-    animation: border-move 6s linear infinite;
-  }
-
-  @keyframes border-move {
-    0% {
-      top: 0%;
-      left: 0%;
-      transform: translate(0%, 0%);
-    }
-    25% {
-      top: 0%;
-      left: 100%;
-      transform: translate(-100%, 0%);
-    }
-    50% {
-      top: 100%;
-      left: 100%;
-      transform: translate(-100%, -100%);
-    }
-    75% {
-      top: 100%;
-      left: 0%;
-      transform: translate(0%, -100%);
-    }
-    100% {
-      top: 0%;
-      left: 0%;
-      transform: translate(0%, 0%);
-    }
-  }
-
-  .card-content {
-    position: relative;
-    z-index: 3;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .docinfo-image-wrapper {
-    position: relative;
-    margin-top: 25px;
-  }
-
-  .docinfo-content {
-    margin-top: -39px;
-    padding: 1rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .docinfo-doctor-name {
-    color: #1a365d;
-    margin: 0.75rem 0;
-    font-size: 1.35rem;
-    font-weight: 700;
-  }
-
-  .docinfo-doctor-role {
-    color: #4a5568;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-  }
+  
 `;
 
 export default Docinfo;
