@@ -151,13 +151,7 @@ const Navbar = () => {
                 Media
               </Link>
             </li>
-            {/* Uncomment if Blog is needed */}
-            {/* <li>
-              <Link href="/blog" className="nav-link" onClick={closeMenu}>
-                <BookOpen className="nav-icon" size={18} />
-                Blog
-              </Link>
-            </li> */}
+           
           </ul>
         </div>
       </div>
