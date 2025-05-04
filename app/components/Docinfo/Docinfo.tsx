@@ -80,7 +80,6 @@ const Docinfo = () => {
   ];
 
   return (
-    // <StyledWrapper>
     <>
       <div className="docinfo-container">
         <div className="docinfo-header">
@@ -128,13 +127,11 @@ const Docinfo = () => {
           ))}
         </div>
       </div>
-    {/* </StyledWrapper> */}
     </>
   );
 };
 
-const StyledWrapper = styled.div`
   
-`;
+
 
 export default Docinfo;
