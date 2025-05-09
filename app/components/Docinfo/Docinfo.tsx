@@ -42,7 +42,7 @@ const Docinfo = () => {
       name: "DR. TANVI KATARIYA",
       roleone: "FOUNDER",
       roletwo:"SENIOR NEURO PHYSIOTHERAPIST",
-      rolethree:"PHYSIOPY",
+      rolethree:"PHYSIOPHY",
       image: "https://zlmsmdibvnnhxthvdhhf.supabase.co/storage/v1/object/public/ScrollSlider/docs/cropped_image%20(1).png",
       specialties: ["Trichology", "Hair Transplant", "Dermatology"],
       slug: "DrTanvi",
