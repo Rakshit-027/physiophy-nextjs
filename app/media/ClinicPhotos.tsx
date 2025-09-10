@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Camera } from "lucide-react";
 import { supabase } from "@/app/components/SupabaseClient/SupabaseClient";
 import "./ClinicPhotos.css";
-import Navbar from "../components/Navbar/page";
+import Navbar from "../components/Navbar/Navbar";
 
 interface Photo {
   id: string;

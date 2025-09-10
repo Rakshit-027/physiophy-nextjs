@@ -3,7 +3,7 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
-import Navbar from "@/app/components/Navbar/page";
+import Navbar from "@/app/components/Navbar/Navbar";
 import Homee from "@/app/pages/Home/page";
 import PatientVideos from "@/app/components/PatientVideos/PatientVideos";
 import About from "@/app/pages/About/page";
