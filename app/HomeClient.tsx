@@ -12,9 +12,8 @@ import Services from "@/app/pages/Services/page";
 import Contact from "@/app/pages/Contact/page";
 import FAQ from "@/app/pages/FAQ/page";
 import Footer from "@/app/components/Footer/Footer";
-import BookAppointment from "../app/pages/Bookappoitment/page"; // Corrected typo
-import Whatsapp from "@/app/components/Mini/Whatsapp/Whatsaap";
-import "./globals.css";
+import BookAppointment from "../app/pages/Bookappoitment/page"; // Corrected 
+import HomeVisitSection from "@/app/components/HomeSections/HomeVisitSection";
 
 export async function generateMetadata() {
   return {
@@ -33,6 +32,8 @@ export default function HomeClient() {
   const { ref: appointmentRef, inView: appointmentInView } = useInView({ threshold: 0.3, triggerOnce: false });
   const { ref: contactRef, inView: contactInView } = useInView({ threshold: 0.3, triggerOnce: false });
   const { ref: faqRef, inView: faqInView } = useInView({ threshold: 0.3, triggerOnce: false });
+  const { ref: homePhysioRef, inView: homePhysioInView } = useInView({ threshold: 0.3, triggerOnce: false });
+  const { ref: homeVisitRef, inView: homeVisitInView } = useInView({ threshold: 0.3, triggerOnce: false });
 
   // Debugging logs to verify inView states
   useEffect(() => {
@@ -44,7 +45,16 @@ export default function HomeClient() {
     console.log("Book Appointment in view:", appointmentInView);
     console.log("Contact in view:", contactInView);
     console.log("FAQ in view:", faqInView);
-  }, [homeInView, videosInView, aboutInView, sliderInView, servicesInView, appointmentInView, contactInView, faqInView]);
+  }, [
+    homeInView,
+    videosInView,
+    aboutInView,
+    sliderInView,
+    servicesInView,
+    appointmentInView,
+    contactInView,
+    faqInView,
+  ]);
 
   // Update document title based on visible section
   useEffect(() => {
@@ -65,6 +75,10 @@ export default function HomeClient() {
       activeTitle = "Physiophy | Contact Us";
     } else if (faqInView) {
       activeTitle = "Physiophy | FAQ";
+    } else if (homePhysioInView) {
+      activeTitle = "Physiophy | Home Physiotherapy";
+    } else if (homeVisitInView) {
+      activeTitle = "Physiophy | Home Visit";
     }
 
     document.title = activeTitle;
@@ -81,7 +95,18 @@ export default function HomeClient() {
     // Check title periodically to prevent override
     const interval = setInterval(persistTitle, 1000);
     return () => clearInterval(interval);
-  }, [homeInView, videosInView, aboutInView, sliderInView, servicesInView, appointmentInView, contactInView, faqInView]);
+  }, [
+    homeInView,
+    videosInView,
+    aboutInView,
+    sliderInView,
+    servicesInView,
+    appointmentInView,
+    contactInView,
+    faqInView,
+    homePhysioInView,
+    homeVisitInView,
+  ]);
 
   return (
     <>
@@ -89,6 +114,10 @@ export default function HomeClient() {
       <div className="page-container">
         <section id="home" ref={homeRef}>
           <Homee />
+        </section>
+    
+        <section id="home-visit" ref={homeVisitRef}>
+          <HomeVisitSection />
         </section>
         <section id="patient-videos" ref={videosRef}>
           <PatientVideos />
