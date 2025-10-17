@@ -60,7 +60,7 @@ const Footer = () => {
             </li>
             <li>
               <MapPin className="footer-icon phone" />
-              +919970127641 +917020427614
+              +919970127614 +917020427614
             </li>
             <li>
               <MapPin className="footer-icon email" />
