@@ -28,19 +28,37 @@ const Footer = () => {
           <h3 className="footer-title">Quick Links</h3>
           <ul className="footer-links">
             <li>
-              <a href="#home">Home</a>
+              <Link href="/">Home</Link>
             </li>
             <li>
-              <a href="#About">About Us</a>
+              <Link href="/pages/About">About Us</Link>
             </li>
             <li>
-              <a href="#services">Services</a>
+              <Link href="/pages/Services">Services</Link>
             </li>
             <li>
-              <a href="#bookappoitment">Book Now</a>
+              <Link href="/pages/Bookappoitment">Book Now</Link>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <Link href="/pages/Contact">Contact</Link>
+            </li>
+            <li>
+              <Link href="/tanvi-shah-best-physiotherapist-nagpur">Dr. Tanvi Shah - Best Physiotherapist</Link>
+            </li>
+            <li>
+              <Link href="/best-physiotherapy-center-nagpur">Best Physiotherapy Center</Link>
+            </li>
+            <li>
+              <Link href="/top-physiotherapist-nagpur">Top Physiotherapist</Link>
+            </li>
+            <li>
+              <Link href="/sports-physiotherapy-nagpur">Sports Physiotherapy</Link>
+            </li>
+            <li>
+              <Link href="/back-pain-physiotherapy-nagpur">Back Pain Treatment</Link>
+            </li>
+            <li>
+              <Link href="/home-visit-physiotherapy-nagpur">Home Visit Physiotherapy</Link>
             </li>
           </ul>
         </div>
