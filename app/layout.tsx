@@ -97,6 +97,7 @@ export default function RootLayout({
         <meta name="geo.placename" content="Nagpur" />
         <meta name="geo.position" content="21.1458;79.0882" />
         <meta name="ICBM" content="21.1458, 79.0882" />
+        <meta name="facebook-domain-verification" content="vfmr7627y5foskjwhpnra4ap21ek7m" />
         
         {/* Enhanced Local Business Schema */}
         <script
