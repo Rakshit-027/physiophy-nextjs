@@ -133,6 +133,27 @@ const Footer = () => {
             </a>
           </div>
         </div>
+
+        <div className="footer-section">
+          <h3 className="footer-title">Policies</h3>
+          <ul className="footer-links">
+            <li>
+              <Link href="/cancellation-refund">Cancellation & Refund</Link>
+            </li>
+            <li>
+              <Link href="/contact-us">Contact Us</Link>
+            </li>
+            <li>
+              <Link href="/privacy-policy">Privacy Policy</Link>
+            </li>
+            <li>
+              <Link href="/terms-conditions">Terms & Conditions</Link>
+            </li>
+            <li>
+              <Link href="/shipping-policy">Shipping Policy</Link>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <div className="footer-bottom">
