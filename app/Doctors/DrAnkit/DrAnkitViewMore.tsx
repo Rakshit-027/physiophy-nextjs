@@ -5,7 +5,7 @@ import { Linkedin, Twitter, Instagram, ExternalLink, Award, BookOpen, Users } fr
 import Image from 'next/image';
 import './DrTanviProfile.css'; // Global CSS file
 
-const DrMeghalanViewMore = () => {
+const DrAnkitViewMore = () => {
   const [isVisible, setIsVisible] = useState(false);
   const profileRef = useRef(null);
 
@@ -38,9 +38,9 @@ const DrMeghalanViewMore = () => {
   }, []);
 
   const achievements = [
-    { icon: <Award size={20} />, text: 'Fellowship in Neurorehabilitation, UK' },
-    { icon: <BookOpen size={20} />, text: '10+ years specialized experience' },
-    { icon: <Users size={20} />, text: 'Founder of PhysioPhy' },
+    { icon: <Award size={20} />, text: 'Consultant Physiotherapist' },
+    { icon: <BookOpen size={20} />, text: 'Specialized Experience' },
+    { icon: <Users size={20} />, text: 'PhysioPhy Team Member' },
   ];
 
   return (
@@ -54,8 +54,8 @@ const DrMeghalanViewMore = () => {
           <div className="tanvi-profile-image-container">
             <div className="tanvi-profile-image-wrapper">
               <Image
-                src="https://zlmsmdibvnnhxthvdhhf.supabase.co/storage/v1/object/public/ScrollSlider/docs/meghna-croped.png"
-                alt="Dr. Megha Lanjewar"
+                src="/DrAnkit.png"
+                alt="Dr. Ankit Telang"
                 width={200}
                 height={200}
                 className="tanvi-profile-image"
@@ -64,24 +64,18 @@ const DrMeghalanViewMore = () => {
           </div>
 
           <div className="tanvi-profile-intro">
-            <h1 className="tanvi-profile-name">Dr. Megha Lanjewar</h1>
-            <p className="tanvi-profile-title">MPTH Neuro | Consultant Neurophysiotherapist</p>
+            <h1 className="tanvi-profile-name">Dr. Ankit Telang</h1>
+            <p className="tanvi-profile-title">Consultant Physiotherapist</p>
           </div>
         </div>
 
         <div className="tanvi-profile-content">
           <div className="tanvi-bio-section">
             <p className="tanvi-profile-bio">
-              An alumna of Lata Mangeshkar College, Nagpur, Dr. Megha Lanjewar specializes in
-              neurological rehabilitation with an emphasis on functional recovery. Her strengths lie
-              in assessing and treating complex neurological cases — including stroke, Parkinson’s,
-              and traumatic brain injuries — with a goal to restore independence in daily life.
+              Dr. Ankit Telang is a dedicated Consultant Physiotherapist at PhysioPhy. With a strong background in physiotherapy, he specializes in providing comprehensive care and rehabilitation for patients. His approach focuses on restoring function and improving quality of life through personalized treatment plans.
             </p>
             <p className="tanvi-profile-bio">
-              Dr. Megha is known for her patient-centric approach and detailed evaluations, often
-              uncovering subtle deficits that significantly influence therapy outcomes. Her calm
-              demeanor and analytical skills contribute immensely to the multidisciplinary strength
-              of PhysioPhy.
+              He is committed to evidence-based practice and works closely with patients to achieve their recovery goals. His expertise and compassionate care make him a valued member of the PhysioPhy team.
             </p>
           </div>
 
@@ -132,4 +126,4 @@ const DrMeghalanViewMore = () => {
   );
 };
 
-export default DrMeghalanViewMore;
+export default DrAnkitViewMore;

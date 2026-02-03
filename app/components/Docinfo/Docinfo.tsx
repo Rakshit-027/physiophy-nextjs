@@ -31,8 +31,8 @@ const Docinfo = () => {
       id: 2,
       name: "DR. GEET KATARIYA",
       roleone: "CHAIRMAN",
-      roletwo:"CONSULTANT RADIOLOGIST",
-      rolethree:"PHYSIOPHY",
+      roletwo: "CONSULTANT RADIOLOGIST",
+      rolethree: "PHYSIOPHY",
       image: "https://zlmsmdibvnnhxthvdhhf.supabase.co/storage/v1/object/public/ScrollSlider/docs/cropped_image%20(3).png",
       specialties: ["Dermatology", "Hair Treatment", "Laser Therapy"],
       slug: "DrGeet",
@@ -41,8 +41,8 @@ const Docinfo = () => {
       id: 3,
       name: "DR. TANVI KATARIYA",
       roleone: "FOUNDER",
-      roletwo:"SENIOR NEURO PHYSIOTHERAPIST",
-      rolethree:"PHYSIOPY",
+      roletwo: "SENIOR NEURO PHYSIOTHERAPIST",
+      rolethree: "PHYSIOPY",
       image: "https://zlmsmdibvnnhxthvdhhf.supabase.co/storage/v1/object/public/ScrollSlider/docs/cropped_image%20(1).png",
       specialties: ["Trichology", "Hair Transplant", "Dermatology"],
       slug: "DrTanvi",
@@ -51,28 +51,28 @@ const Docinfo = () => {
       id: 4,
       name: "DR. URVASHI GAHUKAR",
       roleone: "BRANCH INCHARGE",
-      roletwo:"ORTHO CONSULTANT PHYSIOTHERAPIST",
-      rolethree:"PHYSIOPHY",
+      roletwo: "ORTHO CONSULTANT PHYSIOTHERAPIST",
+      rolethree: "PHYSIOPHY",
       image: "https://zlmsmdibvnnhxthvdhhf.supabase.co/storage/v1/object/public/ScrollSlider/docs/cropped_image%20(2).png",
       specialties: ["Trichology", "Hair Transplant", "Dermatology"],
       slug: "DrUrvashi",
     },
     {
       id: 5,
-      name: "DR. MEGHA LANJEWAR",
+      name: "DR. ANKIT TELANG",
       roleone: "CONSULTANT",
-      roletwo:"NEUROPHYSIOTHERAPIST",
-      rolethree:"PHYSIOPHY",
-      image: "https://zlmsmdibvnnhxthvdhhf.supabase.co/storage/v1/object/public/ScrollSlider/docs/meghna-croped.png",
-      specialties: [""],
-      slug: "DrMegha",
+      roletwo: "PHYSIOTHERAPIST",
+      rolethree: "PHYSIOPHY",
+      image: "/DrAnkit.png",
+      specialties: ["Physiotherapy", "Rehabilitation"],
+      slug: "DrAnkit",
     },
     {
       id: 6,
       name: "DR. SAGAR SAWLANI",
       roleone: "CONSULTANT",
-      roletwo:"PHYSIOTHERAPIST",
-      rolethree:"PHYSIOPHY",
+      roletwo: "PHYSIOTHERAPIST",
+      rolethree: "PHYSIOPHY",
       image: "https://zlmsmdibvnnhxthvdhhf.supabase.co/storage/v1/object/public/ScrollSlider/docs/sagar-crop.png",
       specialties: [""],
       slug: "DrSagar",
@@ -131,7 +131,7 @@ const Docinfo = () => {
   );
 };
 
-  
+
 
 
 export default Docinfo;

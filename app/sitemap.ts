@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
- 
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
@@ -57,7 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: 'https://www.physiophy.com/Doctors/DrMegha',
+      url: 'https://www.physiophy.com/Doctors/DrAnkit',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,

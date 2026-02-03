@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["zlmsmdibvnnhxthvdhhf.supabase.co", "lh3.googleusercontent.com", "via.placeholder.com"],
+    domains: ["zlmsmdibvnnhxthvdhhf.supabase.co", "lh3.googleusercontent.com", "via.placeholder.com", "ui-avatars.com"],
     formats: ['image/webp', 'image/avif'],
   },
   eslint: {
@@ -9,12 +9,12 @@ const nextConfig = {
   },
   // Enable compression for better performance
   compress: true,
-  
+
   // SEO and performance optimizations
   experimental: {
     optimizeCss: true,
   },
-  
+
   // Headers for better SEO and security
   async headers() {
     return [

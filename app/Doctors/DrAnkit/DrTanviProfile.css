@@ -363,6 +363,7 @@
     .tanvi-achievement-badge {
       font-size: 0.8rem;
       padding: 6px 12px;
+      margin-bottom: 24px;
     }
     .tanvi-profile-bio { font-size: 0.95rem; }
     .tanvi-cta-button {
@@ -372,4 +373,3 @@
       padding: 10px 24px;
     }
   }
-  
