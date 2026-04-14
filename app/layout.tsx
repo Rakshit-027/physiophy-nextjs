@@ -98,7 +98,7 @@ export default function RootLayout({
         <meta name="geo.position" content="21.1458;79.0882" />
         <meta name="ICBM" content="21.1458, 79.0882" />
         <meta name="facebook-domain-verification" content="vfmr7627y5foskjwhpnra4ap21ek7m" />
-        
+
         {/* Enhanced Local Business Schema */}
         <script
           type="application/ld+json"
@@ -107,29 +107,29 @@ export default function RootLayout({
               {
                 "@context": "https://schema.org",
                 "@type": "PhysicalTherapy",
-                "name": "PhysioPhy - Best Physiotherapy Clinic in Nagpur",
+                "name": "PhysioPhy - Dhantoli Branch",
                 "alternateName": ["PhysioPhy", "PhysioPhy Clinic Nagpur"],
                 "image": [
                   "https://www.physiophy.com/assets/hero.webp",
                   "https://www.physiophy.com/assets/about-img.jpg"
                 ],
-                "description": "Best physiotherapy clinic in Nagpur offering expert treatments for back pain, neck pain, sports injuries, and rehabilitation. Top-rated physiotherapy center near me.",
+                "description": "Best physiotherapy clinic in Dhantoli, Nagpur offering expert treatments for back pain, neck pain, sports injuries, and rehabilitation.",
                 "url": "https://www.physiophy.com",
                 "address": {
                   "@type": "PostalAddress",
-                  "streetAddress": "Dharampeth", // Replace with exact address
+                  "streetAddress": "Ground Floor, Hyatt Medicare, Besides Get Wel Hospital, Dhantoli",
                   "addressLocality": "Nagpur",
                   "addressRegion": "Maharashtra",
-                  "postalCode": "440010", // Replace with actual postal code
+                  "postalCode": "440012",
                   "addressCountry": "IN"
                 },
                 "geo": {
                   "@type": "GeoCoordinates",
-                  "latitude": 21.1458,
-                  "longitude": 79.0882
+                  "latitude": 21.1288,
+                  "longitude": 79.0825
                 },
-                "telephone": "+91-XXXXXXXXXX", // Replace with actual phone
-                "email": "info@physiophy.com", // Replace with actual email
+                "telephone": "+91-9970127614",
+                "email": "contact@physiophy.com",
                 "priceRange": "₹₹",
                 "paymentAccepted": ["Cash", "Credit Card", "UPI", "Digital Payment"],
                 "currenciesAccepted": "INR",
@@ -141,68 +141,6 @@ export default function RootLayout({
                     "closes": "18:00"
                   }
                 ],
-                "aggregateRating": {
-                  "@type": "AggregateRating",
-                  "ratingValue": "4.9",
-                  "reviewCount": "200",
-                  "bestRating": "5",
-                  "worstRating": "1"
-                },
-                "servesCuisine": "Healthcare",
-                "serviceArea": {
-                  "@type": "GeoCircle",
-                  "geoMidpoint": {
-                    "@type": "GeoCoordinates",
-                    "latitude": 21.1458,
-                    "longitude": 79.0882
-                  },
-                  "geoRadius": "50000"
-                },
-                "areaServed": [
-                  "Nagpur",
-                  "Dharampeth",
-                  "Sitabuldi", 
-                  "Dhantoli",
-                  "Ramdaspeth",
-                  "Civil Lines",
-                  "Mahal",
-                  "Sadar",
-                  "Maharashtra"
-                ],
-                "hasOfferCatalog": {
-                  "@type": "OfferCatalog",
-                  "name": "Physiotherapy Services",
-                  "itemListElement": [
-                    {
-                      "@type": "Offer",
-                      "itemOffered": {
-                        "@type": "Service",
-                        "name": "Back Pain Treatment"
-                      }
-                    },
-                    {
-                      "@type": "Offer", 
-                      "itemOffered": {
-                        "@type": "Service",
-                        "name": "Neck Pain Treatment"
-                      }
-                    },
-                    {
-                      "@type": "Offer",
-                      "itemOffered": {
-                        "@type": "Service", 
-                        "name": "Sports Injury Rehabilitation"
-                      }
-                    },
-                    {
-                      "@type": "Offer",
-                      "itemOffered": {
-                        "@type": "Service",
-                        "name": "Post Surgery Rehabilitation"
-                      }
-                    }
-                  ]
-                },
                 "founder": {
                   "@type": "Person",
                   "name": "Dr. Tanvi Katariya",
@@ -211,15 +149,41 @@ export default function RootLayout({
               },
               {
                 "@context": "https://schema.org",
-                "@type": "LocalBusiness",
-                "name": "PhysioPhy - Best Physiotherapy Clinic Near Me",
-                "description": "Top-rated physiotherapy clinic in Nagpur for all your rehabilitation needs. Best physiotherapy center near me.",
+                "@type": "PhysicalTherapy",
+                "name": "PhysioPhy - Kharbi Branch",
+                "alternateName": ["PhysioPhy Kharbi", "PhysioPhy Clinic Kharbi"],
+                "image": [
+                  "https://www.physiophy.com/assets/hero.webp",
+                  "https://www.physiophy.com/assets/about-img.jpg"
+                ],
+                "description": "Top-rated physiotherapy clinic in Kharbi, Nagpur. Expert care for orthopedic and neurological conditions.",
+                "url": "https://www.physiophy.com",
                 "address": {
                   "@type": "PostalAddress",
-                  "addressLocality": "Nagpur", 
+                  "streetAddress": "Plot No 83, Beside Bhavan’s School Gate No 1, Shrikrishna Nagar, Kharbi",
+                  "addressLocality": "Nagpur",
                   "addressRegion": "Maharashtra",
+                  "postalCode": "440024",
                   "addressCountry": "IN"
-                }
+                },
+                "geo": {
+                  "@type": "GeoCoordinates",
+                  "latitude": 21.1297,
+                  "longitude": 79.1332
+                },
+                "telephone": "+91-7020427614",
+                "email": "contact@physiophy.com",
+                "priceRange": "₹₹",
+                "paymentAccepted": ["Cash", "Credit Card", "UPI", "Digital Payment"],
+                "currenciesAccepted": "INR",
+                "openingHoursSpecification": [
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                    "opens": "09:00",
+                    "closes": "18:00"
+                  }
+                ]
               }
             ])
           }}
