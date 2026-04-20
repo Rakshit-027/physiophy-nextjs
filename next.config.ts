@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["zlmsmdibvnnhxthvdhhf.supabase.co", "lh3.googleusercontent.com", "via.placeholder.com", "ui-avatars.com"],
+    remotePatterns: [
+      { protocol: 'https', hostname: 'zlmsmdibvnnhxthvdhhf.supabase.co' },
+      { protocol: 'https', hostname: 'lh3.googleusercontent.com' },
+      { protocol: 'https', hostname: 'via.placeholder.com' },
+      { protocol: 'https', hostname: 'ui-avatars.com' }
+    ],
     formats: ['image/webp', 'image/avif'],
   },
   eslint: {

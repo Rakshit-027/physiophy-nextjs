@@ -152,6 +152,9 @@ const Footer = () => {
             <li>
               <Link href="/shipping-policy">Shipping Policy</Link>
             </li>
+            <li>
+              <Link href="/account-deletion">Account Data Deletion</Link>
+            </li>
           </ul>
         </div>
       </div>
