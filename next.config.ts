@@ -8,17 +8,10 @@ const nextConfig = {
       { protocol: 'https', hostname: 'ui-avatars.com' }
     ],
     formats: ['image/webp', 'image/avif'],
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
+    dangerouslyAllowLocalIP: true,
   },
   // Enable compression for better performance
   compress: true,
-
-  // SEO and performance optimizations
-  experimental: {
-    optimizeCss: true,
-  },
 
   // Headers for better SEO and security
   async headers() {

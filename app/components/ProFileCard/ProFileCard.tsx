@@ -29,6 +29,8 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ name, role, image, descriptio
         <h4>Ex-Consultant Nanavati Hospital, Mumbai</h4>
         <h4>Internationally Certified Autism Therapist</h4>
         <h4>Internationally Certified Garbh Sanskar Coach</h4>
+        <h4>Certified aqua therapist</h4>
+        <h4>Certified spine specialist,USA</h4>
         {/* <p>{description}</p> */}
         {/* <div className="icons">
           {socialLinks?.map((link, index) => (

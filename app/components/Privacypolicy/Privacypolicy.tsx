@@ -74,14 +74,31 @@ const PrivacyPolicy = () => {
 
       <div className="mb-8 p-5 bg-white/80 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
         <h2 className="text-[#2c5282] text-2xl font-semibold mb-4 relative after:content-[''] after:absolute after:w-12 after:h-1 after:bg-[#63b3ed] after:-bottom-1 after:left-0 sm:text-xl">
-          7. Changes to This Policy
+          7. Data Retention and Account Deletion
+        </h2>
+        <div className="text-[#4a5568] text-base leading-relaxed text-justify sm:text-sm space-y-3">
+          <p>
+            <strong>Data Retention Period:</strong> We retain your personal data (including profile information, account credentials, and app usage data) only for as long as your account remains active or as needed to provide you with our services.
+          </p>
+          <p>
+            <strong>Data Deletion Rights:</strong> You have the right to request the deletion of your personal data and account at any time. Upon receiving a valid request, we will permanently remove your data, subject to any legal or regulatory retention obligations.
+          </p>
+          <p>
+            <strong>How to Request Deletion:</strong> You can submit a deletion request by emailing us at <a href="mailto:support@physiophy.com" className="text-[#2b6cb0] hover:underline">support@physiophy.com</a> or by visiting our online deletion request form at <a href="https://physiophy.com/account-deletion" target="_blank" rel="noopener noreferrer" className="text-[#2b6cb0] hover:underline">https://physiophy.com/account-deletion</a>.
+          </p>
+        </div>
+      </div>
+
+      <div className="mb-8 p-5 bg-white/80 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+        <h2 className="text-[#2c5282] text-2xl font-semibold mb-4 relative after:content-[''] after:absolute after:w-12 after:h-1 after:bg-[#63b3ed] after:-bottom-1 after:left-0 sm:text-xl">
+          8. Changes to This Policy
         </h2>
         <p className="text-[#4a5568] text-base leading-relaxed text-justify sm:text-sm">
           We may periodically refine this policy to reflect legal updates or service improvements. Any changes will be posted here, and your continued use of our services signifies your acceptance. We'll notify you of significant updates via email or during your next visit.
         </p>
       </div>
 
-      <Link 
+      <Link
         href="/contact"
         className="no-underline bg-[rgba(221,219,255,0.4)]"
       >

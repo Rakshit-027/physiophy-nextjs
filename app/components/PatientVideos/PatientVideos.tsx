@@ -77,8 +77,8 @@ const VideoPlayer = ({ src, poster }: VideoItem) => {
             <Image 
               src={poster} 
               alt="Video thumbnail" 
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }}
               priority
             />
             <div className="play-overlay">

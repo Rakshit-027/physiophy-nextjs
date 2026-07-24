@@ -67,6 +67,19 @@ export default function PrivacyPolicyPage() {
         </section>
 
         <section>
+          <h2>Data Retention and Account Deletion Policy</h2>
+          <p>
+            <strong>Data Retention Period:</strong> We retain your personal data (including profile information, account credentials, and app usage data) only for as long as your account remains active or as needed to provide you with our services.
+          </p>
+          <p>
+            <strong>Data Deletion Rights:</strong> You have the right to request the deletion of your personal data and account at any time. Upon receiving a valid request, we will permanently remove your data, subject to any legal or regulatory retention obligations.
+          </p>
+          <p>
+            <strong>How to Request Deletion:</strong> You can submit a deletion request by emailing us at <a href="mailto:support@physiophy.com" style={{ color: '#007bff', textDecoration: 'none' }}>support@physiophy.com</a> or by visiting our online deletion request form at <a href="https://physiophy.com/account-deletion" target="_blank" rel="noopener noreferrer" style={{ color: '#007bff', textDecoration: 'none' }}>https://physiophy.com/account-deletion</a>.
+          </p>
+        </section>
+
+        <section>
           <h2>Cookies</h2>
           <p>
             Our website may use cookies to enhance your browsing experience. You can choose to disable cookies through your browser settings. However, some features of our website may not function properly without cookies.
