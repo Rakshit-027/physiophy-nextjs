@@ -50,7 +50,7 @@ const Docinfo = () => {
     {
       id: 4,
       name: "DR. URVASHI GAHUKAR",
-      roleone: "BRANCH INCHARGE",
+      roleone: "SHRIKRISHNA NAGAR BRANCH HEAD",
       roletwo: "ORTHO CONSULTANT PHYSIOTHERAPIST",
       rolethree: "PHYSIOPHY",
       image: "https://zlmsmdibvnnhxthvdhhf.supabase.co/storage/v1/object/public/ScrollSlider/docs/cropped_image%20(2).png",
