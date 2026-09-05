@@ -87,6 +87,18 @@ export default function Founder() {
         <i className="fas fa-walking text-indigo-500"></i>
         <p>Internationally Certified Garbh Sanskar Coach</p>
       </div>
+      <div className="flex items-center justify-center space-x-3 text-gray-700 hover:text-indigo-600 transition-colors duration-300">
+        <i className="fas fa-walking text-indigo-500"></i>
+        <p>Certified Spine Rehab Specialist,USA</p>
+      </div>
+      <div className="flex items-center justify-center space-x-3 text-gray-700 hover:text-indigo-600 transition-colors duration-300">
+        <i className="fas fa-walking text-indigo-500"></i>
+        <p>Certified Aquatic Therapist</p>
+      </div>
+       <div className="flex items-center justify-center space-x-3 text-gray-700 hover:text-indigo-600 transition-colors duration-300">
+        <i className="fas fa-walking text-indigo-500"></i>
+        <p>Consultant at Nelson Hospital Nagpur</p>
+      </div>
     </div>
   </div>
 </div>

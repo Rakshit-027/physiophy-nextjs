@@ -97,6 +97,7 @@ const VideoPlayer = ({ src, poster }: VideoItem) => {
         preload="none"
         onLoadedData={handleVideoLoaded}
         className={`${isLoaded ? "video-loaded" : "video-loading"} ${showPoster ? "hidden" : ""}`}
+        suppressHydrationWarning
       />
       <div className={`video-controls ${showPoster ? "hidden" : ""}`}>
         <div className="controls-wrapper">

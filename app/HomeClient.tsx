@@ -76,9 +76,9 @@ export default function HomeClient() {
     } else if (faqInView) {
       activeTitle = "Physiophy | FAQ";
     } else if (homePhysioInView) {
-      activeTitle = "Physiophy | Home Physiotherapy";
+      activeTitle = "PhysioPhy | Home Physiotherapy";
     } else if (homeVisitInView) {
-      activeTitle = "Physiophy | Home Visit";
+      activeTitle = "PhysioPhy App | Home Visits & Digital Physiotherapy";
     }
 
     document.title = activeTitle;
